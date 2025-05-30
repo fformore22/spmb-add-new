@@ -1,0 +1,12 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+$config['rest_enable_keys'] = TRUE;
+$config['rest_key_column'] = 'key';
+$config['rest_key_length'] = 40;
+$config['rest_key_name'] = 'X-API-KEY';
+$config['rest_enable_logging'] = TRUE;
+$config['rest_logs_table'] = 'logs';
+$config['rest_enable_limits'] = TRUE;
+$config['rest_limits_table'] = 'limits';
+$config['rest_ip_whitelist_enabled'] = FALSE;

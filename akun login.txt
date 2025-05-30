@@ -1,0 +1,11 @@
+login akun admin
+username : admin
+pass : password
+
+login akun panitia
+username : panitia
+pass : password
+
+login akun bendahara
+username : bendahara
+pass : password

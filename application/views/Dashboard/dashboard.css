@@ -1,0 +1,654 @@
+<style>
+/* ======= CORE UI IMPROVEMENTS ======= */
+body {
+  font-family: 'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Box styling improvements */
+.box {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  border: none;
+  margin-bottom: 22px;
+}
+
+.box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.box-header {
+  border-radius: 8px 8px 0 0;
+  padding: 15px;
+}
+
+.box-body {
+  padding: 18px;
+}
+
+/* Info boxes styling */
+.info-box {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.info-box-icon {
+  height: 90px;
+  width: 90px;
+  font-size: 45px;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box-content {
+  padding: 10px 15px;
+}
+
+.info-box-text {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.info-box-number {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* Small box styling */
+.small-box {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.small-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.small-box .icon {
+  top: 10px;
+  right: 15px;
+  font-size: 70px;
+  transition: all 0.3s ease;
+}
+
+.small-box:hover .icon {
+  font-size: 80px;
+  top: 5px;
+}
+
+.small-box h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.small-box p {
+  font-size: 16px;
+}
+
+.small-box .small-box-footer {
+  border-radius: 0 0 12px 12px;
+  padding: 8px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.small-box .small-box-footer:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding-right: 5px;
+}
+
+/* Progress bars */
+.progress {
+  height: 10px;
+  margin-bottom: 10px;
+  box-shadow: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  border-radius: 5px;
+  transition: width 1s ease;
+}
+
+.progress-description {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Buttons styling */
+.btn {
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 8px 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.btn-flat {
+  box-shadow: none;
+  border-radius: 6px;
+}
+
+.btn-flat:hover, .btn-flat:focus, .btn-flat:active {
+  transform: none;
+  box-shadow: none;
+  opacity: 0.85;
+}
+
+/* Labels */
+.label {
+  padding: 5px 10px;
+  font-weight: 600;
+  border-radius: 100px;
+  font-size: 11px;
+}
+
+/* Callout styling */
+.callout {
+  border-radius: 8px;
+  padding: 18px;
+  margin: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left-width: 4px;
+}
+
+.callout.callout-info {
+  border-color: #3498db;
+  background-color: #eef7fb;
+}
+
+.callout.callout-danger {
+  border-color: #e74c3c;
+  background-color: #fdf3f2;
+}
+
+.callout.callout-warning {
+  border-color: #f39c12;
+  background-color: #fef5e7;
+}
+
+/* Tables styling */
+.table-bordered {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9fafb;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td {
+  border: 1px solid #f0f0f0;
+  padding: 12px 10px;
+}
+
+.table-bordered > thead > tr > th {
+  background-color: #f1f4f9;
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  color: #495057;
+}
+
+/* Timeline styling */
+.timeline:before {
+  background: #e9ecef;
+  width: 3px;
+}
+
+.timeline > li > .timeline-item {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.timeline > li > .timeline-item > .timeline-header {
+  padding: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.timeline > li > .timeline-item > .timeline-body {
+  padding: 15px;
+}
+
+.timeline > li > .fa,
+.timeline > li > .fas,
+.timeline > li > .far {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 35px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #3498db;
+  color: #fff;
+  z-index: 5;
+}
+
+.time-label > span {
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Direct chat styling */
+.direct-chat-messages {
+  border-radius: 8px;
+  background-color: #f9fafb;
+  padding: 15px;
+}
+
+.direct-chat-msg {
+  margin-bottom: 20px;
+}
+
+.direct-chat-text {
+  border-radius: 12px;
+  padding: 12px 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  margin: 8px 0;
+}
+
+.direct-chat-name {
+  font-weight: 600;
+}
+
+.direct-chat-timestamp {
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.direct-chat-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right .direct-chat-text {
+  border-radius: 12px;
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Input and form elements */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 10px 15px;
+  height: auto;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.input-group-addon {
+  border-radius: 6px 0 0 6px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+/* Map container */
+#map {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  min-height: 500px;
+}
+
+/* Color enhancements for better visual hierarchy */
+.bg-aqua, .bg-blue, .bg-primary {
+  background-color: #3498db !important;
+}
+
+.bg-green {
+  background-color: #2ecc71 !important;
+}
+
+.bg-red {
+  background-color: #e74c3c !important;
+}
+
+.bg-yellow {
+  background-color: #f39c12 !important;
+}
+
+.bg-purple {
+  background-color: #9b59b6 !important;
+}
+
+.bg-maroon {
+  background-color: #8e44ad !important;
+}
+
+.bg-teal {
+  background-color: #16a085 !important;
+}
+
+.label-success {
+  background-color: #2ecc71 !important;
+}
+
+.label-warning {
+  background-color: #f39c12 !important;
+}
+
+.label-danger {
+  background-color: #e74c3c !important;
+}
+
+/* Specific adjustments for payment section */
+.payment-calculator {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.payment-calculator .table {
+  margin-bottom: 0;
+}
+
+.payment-method {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 15px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.payment-method:hover {
+  border-color: #3498db;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+  transform: translateY(-3px);
+}
+
+.payment-method.active {
+  border-color: #3498db;
+  background-color: #eef7fb;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.row > div {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.small-box, .info-box {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+.callout, .box {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.box-primary {
+  animation-delay: 0.1s;
+}
+
+.small-box:hover .icon, .info-box:hover .info-box-icon i {
+  animation: pulse 1s infinite;
+}
+
+/* Stagger loading animations for elements */
+.row > div:nth-child(1) { animation-delay: 0.1s; }
+.row > div:nth-child(2) { animation-delay: 0.2s; }
+.row > div:nth-child(3) { animation-delay: 0.3s; }
+.row > div:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .small-box h3 {
+    font-size: 24px;
+  }
+  
+  .info-box-content {
+    padding: 5px 10px;
+  }
+  
+  .info-box-number {
+    font-size: 18px;
+  }
+}
+
+/* Custom loading spinner */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Hover effect for timeline items */
+.timeline > li > .timeline-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Improve datatable pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border-radius: 4px;
+  border: none !important;
+  background: #f8fafc !important;
+  margin: 0 2px;
+  padding: 6px 12px !important;
+  transition: all 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #3498db !important;
+  color: white !important;
+  box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Improve search input in datatable */
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  padding: 6px 10px;
+}
+
+/* Add a cool badge effect to some counters */
+.badge-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-effect::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+/* Improved focus states for accessibility */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+
+/* Add this JS to implement animation on scroll */
+</style>
+
+<script>
+// Add fade-in animation when scrolling
+document.addEventListener('DOMContentLoaded', function() {
+  // Create the observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  // Observe all boxes, small-boxes, and info-boxes
+  document.querySelectorAll('.box, .small-box, .info-box').forEach(element => {
+    element.classList.add('animate-hidden');
+    observer.observe(element);
+  });
+  
+  // Add smooth hover effect to buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+      this.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    });
+  });
+});
+
+// Make data counters animate when they come into view
+document.addEventListener('DOMContentLoaded', function() {
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const countTo = parseInt(target.innerText);
+        
+        let count = 0;
+        const timer = setInterval(() => {
+          count += Math.ceil(countTo / 25);
+          if (count >= countTo) {
+            target.innerText = countTo;
+            clearInterval(timer);
+          } else {
+            target.innerText = count;
+          }
+        }, 30);
+        
+        counterObserver.unobserve(target);
+      }
+    });
+  });
+  
+  document.querySelectorAll('.small-box h3, .info-box-number').forEach(counter => {
+    if (!isNaN(parseInt(counter.innerText))) {
+      counterObserver.observe(counter);
+    }
+  });
+});
+</script>
+
+<style>
+/* Add these classes for the scroll animation */
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
