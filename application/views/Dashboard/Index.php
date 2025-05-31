@@ -1,16 +1,66 @@
 <div class="row">
   <div class="col-xs-12">
     <div class="box box-info">
-      <div class="box-header <?= $this->config->item('header')?>">
-        <img src="<?php echo base_url('assets/dist/img/nenemowhite.png') ?>" width="55" height="25">
-          <h3 class="box-title"><?= $this->config->item('sitename')?> <?php echo strtoupper($pengaturan->nama_sekolah) ?></h3>
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      <div class="box-body p-0">
+        <div id="carousel-ppdb" class="carousel slide responsive-carousel" data-ride="carousel" data-interval="3500">
+          <!-- Indicators -->
+
+          <!-- Slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="<?php echo base_url('assets/dist/img/1.png'); ?>" alt="Slide 1" class="carousel-image img-responsive rounded-carousel-img">
+            </div>
+            <div class="item">
+              <img src="<?php echo base_url('assets/dist/img/2.png'); ?>" alt="Slide 2" class="carousel-image img-responsive rounded-carousel-img">
+            </div>
+            <div class="item">
+              <img src="<?php echo base_url('assets/dist/img/3.png'); ?>" alt="Slide 3" class="carousel-image img-responsive rounded-carousel-img">
+            </div>
           </div>
+          <!-- No controls for auto-slide -->
+        </div>
       </div>
     </div>
   </div>
 </div>
+<style>
+/* Carousel image rounded and responsive */
+.rounded-carousel-img {
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 350px;
+  transition: border-radius 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+@media (max-width: 767px) {
+  .rounded-carousel-img {
+    max-height: 180px;
+    border-radius: 12px;
+  }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+    height: auto;
+  }
+}
+.carousel-inner {
+  width: 100%;
+  overflow: hidden;
+}
+.carousel {
+  margin-bottom: 0;
+}
+</style>
+<script>
+$(function(){
+  $('#carousel-ppdb').carousel({
+    interval: 3500,
+    pause: false
+  });
+});
+</script>
 
 
 <?php

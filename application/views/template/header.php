@@ -1157,6 +1157,71 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   background: rgba(255, 255, 255, 0.7);
   width: 30px;
 }
+
+/* Responsive Carousel Styling */
+.responsive-carousel {
+  margin-bottom: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .carousel-image {
+    height: 180px;
+  }
+  .carousel-caption h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .carousel-caption p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-image {
+    height: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-image {
+    height: 350px;
+  }
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px 15px;
+  bottom: 20px;
+}
+
+.carousel-indicators li {
+  border: 1px solid #3c8dbc;
+}
+
+.carousel-indicators .active {
+  background-color: #3c8dbc;
+}
+
+.carousel-control {
+  width: 5%;
+  opacity: 0.8;
+}
+
+.carousel-control.left, 
+.carousel-control.right {
+  background-image: none;
+}
   </style>
 </head>
 
